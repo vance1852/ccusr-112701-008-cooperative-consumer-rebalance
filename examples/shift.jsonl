@@ -1,0 +1,12 @@
+{"at": 1, "kind": "publish", "partition": "P", "offset": 2, "value": "复核"}
+{"at": 2, "kind": "output", "partition": "P", "member": "A", "epoch": 1, "batch": "A2", "next_offset": 3, "result": "accepted"}
+{"at": 3, "kind": "join", "member": "B", "features": ["text"], "parallel": 1}
+{"at": 4, "kind": "rebalance", "move": {"P": "B", "Q": "B"}}
+{"at": 5, "kind": "member_lost", "member": "A"}
+{"at": 6, "kind": "publish", "partition": "R", "offset": 1, "value": "独立事件"}
+{"at": 7, "kind": "fence", "partition": "P", "epoch": 2, "member": "B"}
+{"at": 8, "kind": "output", "partition": "P", "member": "A", "epoch": 1, "batch": "A2", "next_offset": 3, "result": "committed"}
+{"at": 9, "kind": "join", "member": "D", "features": ["proof"], "parallel": 1}
+{"at": 10, "kind": "rebalance", "move": {"Q": "D"}}
+{"at": 11, "kind": "restart"}
+{"at": 12, "kind": "take", "partition": "P", "member": "B", "epoch": 2}

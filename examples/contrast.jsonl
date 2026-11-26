@@ -1,0 +1,5 @@
+{"at": 1, "kind": "output", "partition": "Q", "member": "A", "epoch": 1, "batch": "A4", "next_offset": 5, "result": "accepted"}
+{"at": 5, "kind": "member_lost", "member": "A"}
+{"at": 21, "kind": "retained", "partition": "Q", "first": 6}
+{"at": 22, "kind": "join", "member": "D", "features": ["proof"], "parallel": 1}
+{"at": 23, "kind": "take", "partition": "Q", "member": "D", "epoch": 2}

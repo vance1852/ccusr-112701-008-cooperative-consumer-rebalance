@@ -1,0 +1,37 @@
+{
+  "partitions": {
+    "P": {
+      "require": "text",
+      "next": 2
+    },
+    "Q": {
+      "require": "proof",
+      "next": 4
+    },
+    "R": {
+      "require": "text",
+      "next": 1
+    }
+  },
+  "members": {
+    "A": {
+      "features": [
+        "text",
+        "proof"
+      ],
+      "parallel": 2
+    },
+    "C": {
+      "features": [
+        "text"
+      ],
+      "parallel": 1
+    }
+  },
+  "assigned": {
+    "P": "A",
+    "Q": "A",
+    "R": "C"
+  },
+  "retention_seconds": 20
+}
